@@ -17,6 +17,7 @@ import plotly.graph_objs as go
 
 # Intialize the Dash app
 app = dash.Dash(__name__)
+server = app.server
 
 # Load Data and Preprocessing of Data
 #filename = 'insurance-Copy1.csv'
@@ -168,7 +169,7 @@ def predict_charge(n_clicks, age, bmi, children, sex, smoker, region):
 
 
 if __name__ == '__main__':
-    app.run(debug = True, port = 9090)
+    app.run(debug = True)
                 
 
 
